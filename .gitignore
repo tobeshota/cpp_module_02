@@ -1,0 +1,16 @@
+# debug files
+*.DS_Store
+*.vscode/
+*.dSTM/
+
+# output files
+*.out
+megaphone
+phonebook
+
+# object files
+*.o
+*.a
+
+# test files
+tmp/
