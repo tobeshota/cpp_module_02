@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:25 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/11 23:50:26 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/12 14:36:55 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-#include <iostream>
 
 Fixed::Fixed() : m_fixed_point_nb(0) {
   std::cout << "Default constructor called" << std::endl;

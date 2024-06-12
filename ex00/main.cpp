@@ -6,11 +6,9 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:30 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/12 14:29:57 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/12 14:37:11 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <iostream>
 
 #include "Fixed.hpp"
 
