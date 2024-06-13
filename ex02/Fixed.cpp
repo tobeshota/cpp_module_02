@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:25 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/13 16:36:23 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/13 18:18:05 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ bool Fixed::operator==(const Fixed &other) const {
 }
 
 bool Fixed::operator!=(const Fixed &other) const {
-  return this->m_fixed_point_nb == other.getRawBits();
+  return this->m_fixed_point_nb != other.getRawBits();
 }
 
 Fixed Fixed::operator+(const Fixed &other) const {

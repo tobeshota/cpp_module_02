@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+         #
+#    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/03 16:13:09 by toshota           #+#    #+#              #
-#    Updated: 2024/06/11 23:51:50 by tobeshota        ###   ########.fr        #
+#    Updated: 2024/06/13 18:59:28 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,6 @@ debug: re
 address: re
 
 test:
-	./test.sh
+	 ./test.sh
 
 .PHONY:	all clean fclean re format debug address test

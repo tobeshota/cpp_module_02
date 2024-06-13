@@ -6,11 +6,34 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:30 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/13 16:26:52 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/13 18:59:08 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+// int main(void) {
+//   Fixed a(3.14f);
+//   Fixed b(2);
+
+//   std::cout << "a       :\t" << a        << std::endl;
+//   std::cout << "b       :\t" << b        << std::endl;
+//   std::cout << "a + b   :\t" << a + b    << std::endl;
+//   std::cout << "a - b   :\t" << a - b    << std::endl;
+//   std::cout << "a * b   :\t" << a * b    << std::endl;
+//   std::cout << "a / b   :\t" << a / b    << std::endl;
+//   std::cout << "a++     :\t" << a++      << std::endl;
+//   std::cout << "++a     :\t" << ++a      << std::endl;
+//   std::cout << "a--     :\t" << a--      << std::endl;
+//   std::cout << "--a     :\t" << --a      << std::endl;
+//   std::cout << "(a == b):\t" << (a == b) << std::endl;
+//   std::cout << "(a != b):\t" << (a != b) << std::endl;
+//   std::cout << "(a < b) :\t" << (a < b)  << std::endl;
+//   std::cout << "(a <= b):\t" << (a <= b) << std::endl;
+//   std::cout << "(a > b) :\t" << (a > b)  << std::endl;
+//   std::cout << "(a >= b):\t" << (a >= b) << std::endl;
+
+// }
 
 int main(void) {
   Fixed a;
