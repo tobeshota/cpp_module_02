@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:28 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/13 16:27:33 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/13 19:17:48 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Fixed {
   Fixed(float fnb);                      // 浮動小数点数の引数をとるコンストラクタ
   ~Fixed();                              // デストラクタ
 
+  /* 自身を返す演算子では，これを実現するために，値返しでなく参照返しが用いられる */
   Fixed& operator=(const Fixed& other);  // コピー代入演算子
   bool operator>(const Fixed& other) const;
   bool operator<(const Fixed& other) const;
