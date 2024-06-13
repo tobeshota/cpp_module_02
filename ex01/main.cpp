@@ -3,15 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 23:50:30 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/13 10:51:48 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/13 17:22:19 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+/* 浮動小数点数と固定小数点数
+
+固定小数点数は，
+・浮動小数点数に固定ビットだけ右シフトしたものとして格納される．
+・使用する前には，右シフトしただけ左シフトさせる．
+
+今回の場合，浮動小数点数42.42fは，
+・固定小数点数に格納されるとき，8bit右シフトする．m_fixed_point_nb = roundf(42.42f * (1 << 8));
+・使用する際には，8bit左シフトする．(float)m_fixed_point_nb / (1 << 8);
+
+ */
 int main(void) {
     Fixed a;                                                            //  ①Default constructor called
     Fixed const b(10);                                                  //  ②Int constructor called
