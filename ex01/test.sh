@@ -4,15 +4,10 @@
 # 実行ファイル名
 readonly EXECUTABLE_FILE_NAME="a.out"
 
-# テスト項目を記述するファイル名（未指定の場合，run_test関数記載のテストが実施される）
-# ファイルの書式: <実行ファイルの引数> ; <望まれる出力結果>
-readonly QA_FILE_NAME="hoge"
 # --------------------------------------
 
 readonly EXECUTABLE_DIR_PATH=$(dirname "$0")
 readonly EXE="${EXECUTABLE_DIR_PATH}/${EXECUTABLE_FILE_NAME}"
-readonly QA_DIR_PATH="${EXECUTABLE_DIR_PATH}"
-readonly QA="${QA_DIR_PATH}/${QA_FILE_NAME}"
 readonly MAKEFILE_PATH="${EXECUTABLE_DIR_PATH}/Makefile"
 readonly TEST_NAME="${EXECUTABLE_FILE_NAME} test"
 readonly GREEEN="\033[32m"
@@ -57,25 +52,6 @@ function print_result {
 }
 
 # - assert ---------------------------
-function assert_from_qafile {
-	# Q/Aファイルが存在するかチェック
-	if [ ! -e "$QA" ]; then
-		echo "file not found: $QA"
-		exit 1
-	fi
-
-	# ファイルから1行を読み取る
-	while IFS= read -r line; do
-		# セミコロンを区切り文字として分割
-		IFS=';' read -r test_param expect <<<"$line"
-
-		# ダブルクォートをトリム
-		test_param=$(echo $test_param | sed 's/^ *"//;s/" *$//')
-		expect=$(echo $expect | sed 's/^ *"//;s/" *$//')
-		assert "$(${EXE} ${test_param} 2>&1)" "${expect}"
-	done <"$QA"
-}
-
 function assert {
 	local actual=$1
 	local expect=$2
@@ -96,13 +72,8 @@ function assert {
 # - run_test ---------------------------
 function run_test {
 	printf "|- - - - - - - - - - start - - - - - - - - - -|\n"
-	# Q/Aファイルが存在するかチェック
-	if [ -e "$QA" ]; then
-		assert_from_qafile
-	else
-		# Q/Aファイルを用意しない場合，以下の項目をテストする
-		# 追加形式: assert <actual> <expect>
-		assert "$(${EXE})" "Default constructor called
+	# 追加形式: assert <actual> <expect>
+	assert "$(${EXE})" "Default constructor called
 Int constructor called
 Float constructor called
 Copy constructor called
@@ -122,7 +93,6 @@ Destructor called
 Destructor called
 Destructor called
 Destructor called"
-	fi
 }
 
 # - main ---------------------------
